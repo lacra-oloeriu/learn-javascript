@@ -13,3 +13,5 @@ console.log ( "Age:" , age);
 
 // you can also embet variables is stringd...¨
 console.log(`Height ${feet} feet  ${inches} inches.`);
+
+console.log("Age * Height:" , age * height)
