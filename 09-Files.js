@@ -6,3 +6,11 @@ const fs = require("fs");
 let contents = fs.readFileSync("test.txt");
 console.log("Contents:");
 console.log(contents.toString());
+
+
+// using a callBack
+
+console.log("------------------------");
+fs.readFileSync("test.txt", (err, DataTransfer) => {
+    console,log(data.toString());
+});
