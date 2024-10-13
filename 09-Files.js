@@ -11,6 +11,6 @@ console.log(contents.toString());
 // using a callBack
 
 console.log("------------------------");
-fs.readFileSync("test.txt", (err, DataTransfer) => {
+fs.readFileSync("test.txt", (err, data) => {
     console,log(data.toString());
 });
