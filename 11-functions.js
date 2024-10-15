@@ -6,3 +6,6 @@ printPerson('Lacra', 51);
 printPerson('Bogdan', 46);
 printPerson('Calin', 16);
 printPerson('Cezar', 13);
+
+console.log('-------------pets-----------');
+ 
