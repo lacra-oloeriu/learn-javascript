@@ -7,3 +7,4 @@ console.log("Feet Tall:" , Math .floor (74/12));
 console.log ("And  Inches:", 74 - ( Math.floor(74/12) *12));
 console.log("Age * Height:" , 43 * 74); 
 console.log("Age * Feet:" , 43 * Math.floor (74/12));
+
