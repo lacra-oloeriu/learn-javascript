@@ -20,12 +20,14 @@ let y = 100;
 if (y == 100) {
   if(x < 10) {
         console.log("log 1", x, y);
-    } else {
+    } 
+    else {
         console.log("log 2", x, y);
     }
-  if(x>10) {
+  if(x > 20) {
         console.log("log 3", x, y);
-    }else {
+    }
+    else {
         console.log("log 4", x, y);
     }
 }
