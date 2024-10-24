@@ -14,5 +14,5 @@ while( count < 10) {
         console.log( count, "ODD");
     }
 
-    count++;
+    count++; //if you count down here , you go in a infinite loop
 }
