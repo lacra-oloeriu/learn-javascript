@@ -11,3 +11,9 @@ while (i < pigments.length) {
 for(let i = 0; i < pigments.length; i++ ) {
     console.log(`for ${i}=${pigments[i]}`);
 }
+
+// what about that??
+
+for(let paint of  pigments) {
+    console.log(`for-of ${paint}`);
+}
