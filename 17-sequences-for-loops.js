@@ -41,5 +41,5 @@ while(count > 0) {
     count--; 
 }
 
-//label2;
+label2:
 console.log("Done.");
