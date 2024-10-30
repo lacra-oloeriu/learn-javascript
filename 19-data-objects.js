@@ -18,4 +18,5 @@ exports.languages = [
     {name: 'Perl6', speed: 'Moderate', opinion: ['Fun', 'Weird']},
     {name: 'C', speed: 'Fast', opinion: ['Annoying', 'Dangerous']},
     {name: 'Forth', speed: 'Fast', opinion: ['Fun', 'Difficult']},
-];
+]
+ 
