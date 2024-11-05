@@ -20,6 +20,11 @@ const ask = (hp, prompt) => {
 }
 
 const door = (hp) => {
+    say("You open the door and get the gold");
+    say("A monster is guarding the goold")
+    if(next ==="open the door") {
+        say
+    }
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?
 }
