@@ -19,7 +19,47 @@ const ask = (hp, prompt) => {
     }
 }
 
-const door = (hp) = {
+const door = (hp) => {
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?
 }
+
+const spider = (hp) => {
+    //They enter here, annd the spider takes 10 hits points.
+    //if they live then theey can run away
+}
+
+const gold = (hp) => {
+    //end of the game they win if they get the gold
+}
+
+const rope = (hp) => {
+    //they are at the bottom of the well
+    //they can go through the door to the gold
+    //or go take a wrong turn to the spider
+}
+
+const well = (hp) => {
+    say("You are walking through the woods and see a well.");
+    say("Walking up to it and looking down");
+    say("you see a shiny thing at the bottom.");
+    let next = ask(hp, "What do you do?");
+
+    if(next === "climb") {
+        say("You climb down the rope.");
+        rope(hp);
+    } else if(next === "jump") {
+        say("Yikes! Let's see if you survive!");
+        hp = Math.floor(hp / 2);
+        rope(hp);
+    } else {
+        say("You can't do that here.");
+        well(hp);
+    }
+}
+
+// setup hit points
+let hp = Math.floor(Math.random() * 10) + 1;
+
+// this starts the game
+well(hp)
