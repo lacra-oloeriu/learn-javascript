@@ -21,9 +21,15 @@ const ask = (hp, prompt) => {
 
 const door = (hp) => {
     say("You open the door and get the gold");
-    say("A monster is guarding the goold")
-    if(next ==="open the door") {
-        say
+    say("A monster is guarding the goold");
+    let what = ask(hp, "What do you do?");
+    if ( what ==="open") {
+        say("you open the door.");
+        door(hp);
+    }else {
+        say("You can't do that here.");
+        hp= Math.floor(hp/2);
+        door(hp)
     }
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?
