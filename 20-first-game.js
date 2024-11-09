@@ -22,13 +22,17 @@ const ask = (hp, prompt) => {
 const door = (hp) => {
     say("You open the door and get the gold");
     say("A monster is guarding the goold");
-    let what = ask(hp, "What do you do?");
-    if ( what ==="open") {
+    say("Use a shiny thing to bit the monster");
+    let after = ask(hp, "What do you do?");
+    if ( after ==="open") {
         say("you open the door.");
         door(hp);
-    }else {
-        say("You can't do that here.");
+    }else if (after ==="bit the monster") {
+        say("You bit the monster");
         hp= Math.floor(hp/2);
+        door(hp)
+    }else {
+        say("you can't do that here")
         door(hp)
     }
     //they have to open the door to get the gold
