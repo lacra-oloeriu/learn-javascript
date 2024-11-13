@@ -24,16 +24,16 @@ const door = (hp) => {
     say("A monster is guarding the goold");
     say("Use a shiny thing to bit the monster");
     //let after = ask(hp, "What do you do?");
-    if ( next ==="open") {
+    if ( next ==="spider") {
         say("you open the door.");
-        door(hp);
+        (hp);
     }else if (next ==="bit the monster") {
         say("You bit the monster");
         hp= Math.floor(hp/2);
-        door(hp)
+        (hp)
     }else {
         say("you can't do that here")
-        door(hp)
+        (hp)
     }
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?
