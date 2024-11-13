@@ -23,11 +23,11 @@ const door = (hp) => {
     say("You open the door and get the gold");
     say("A monster is guarding the goold");
     say("Use a shiny thing to bit the monster");
-    let after = ask(hp, "What do you do?");
-    if ( after ==="open") {
+    //let after = ask(hp, "What do you do?");
+    if ( next ==="open") {
         say("you open the door.");
         door(hp);
-    }else if (after ==="bit the monster") {
+    }else if (next ==="bit the monster") {
         say("You bit the monster");
         hp= Math.floor(hp/2);
         door(hp)
