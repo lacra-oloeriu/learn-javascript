@@ -1,6 +1,10 @@
 
+const say = (prompt) => {
+    console.log(prompt);
+}
+
 const well = (hp) => {
-    console.log("Hello well");
+    say("You are walking through the woods and see a well.");
     
 }
 
