@@ -11,8 +11,8 @@ const well = (hp) => {
     say("You are walking through the woods and see a well.");
     say("Walking up to it ans looking down");
     say("You see a shiny thing at the bottom");
+    let next = ask(hp, "What do you do?");
     
 }
 
 well(10);
-ask(10);
