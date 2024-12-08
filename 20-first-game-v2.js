@@ -1,17 +1,20 @@
-
+//const readline = require('readline-sync')
 const say = (prompt) => {
     console.log(prompt);
 }
 
-const ask = (hp, prompt) => {
-    console.log(`[[You have ${hp} hit points.]]`);
-    //let's put some logic in here 
-    
+const die = ( message) => {
+    say(message);
+    process.exit(1);
 }
 
-const rope = (hp) => {
-    console.log("what next?");
-}
+const ask = (hp, prompt) => {
+    console.log(`[[You have ${hp} hit points.]]`);
+   
+    }
+    //let's put some logic in here 
+
+
 
 const well = (hp) => {
     say("You are walking through the woods and see a well.");
