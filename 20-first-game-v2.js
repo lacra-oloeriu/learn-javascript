@@ -1,4 +1,5 @@
-//const readline = require('readline-sync')
+const readline = require('readline-sync');
+
 const say = (prompt) => {
     console.log(prompt);
 }
@@ -10,6 +11,11 @@ const die = ( message) => {
 
 const ask = (hp, prompt) => {
     console.log(`[[You have ${hp} hit points.]]`);
+    if (hp <= 0 ) {
+        die("You died!");
+    }else {
+        return readline.question(prompt + '');
+    }
    
     }
     //let's put some logic in here 
