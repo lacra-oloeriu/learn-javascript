@@ -49,6 +49,11 @@ const gold = (hp) => {
 }
 
 const rope = (hp) => {
+    if (hp < 0) {
+        die("You didn't make it");
+    } else {
+        say("You made it!");
+    }
     //they are at the bottom of the well
     //they can go through the door to the gold
     //or go take a wrong turn to the spider

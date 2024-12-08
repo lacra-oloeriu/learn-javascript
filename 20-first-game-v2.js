@@ -13,6 +13,12 @@ const ask = (hp, prompt) => {
     }
 }
 
+const rope = (hp) => {
+    if (hp < 0) {
+        die("You didn't make it.");
+    }
+}
+
 const well = (hp) => {
     say("You are walking through the woods and see a well.");
     say("Walking up to it ans looking down");
