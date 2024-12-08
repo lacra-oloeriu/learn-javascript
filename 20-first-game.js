@@ -54,6 +54,7 @@ const rope = (hp) => {
     } else {
         say("You made it!");
     }
+    ask( hp, "What's next?");
     //they are at the bottom of the well
     //they can go through the door to the gold
     //or go take a wrong turn to the spider
