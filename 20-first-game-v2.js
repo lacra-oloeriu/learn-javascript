@@ -19,7 +19,13 @@ const ask = (hp, prompt) => {
    
     }
     //let's put some logic in here 
-
+const rope = (hp) => {
+    if (hp < 0 ) {
+        die("You didn't make it.");
+    }else {
+        say("You made it!");
+    }
+}
 
 
 const well = (hp) => {
