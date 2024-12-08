@@ -29,8 +29,14 @@ const well = (hp) => {
     if ( next === "climb") {
         say("You climb down the rope.");
         rope (hp);
+    }else if (next === "jump") {
+        say("Yikes! Let's see if you survive!");
+        hp = Math.floor(hp / 2);
+        rope(hp);
     }
     
 }
+
+let hp = Math.floor(Math.random() * 10) + 1;
 
 well(10);
