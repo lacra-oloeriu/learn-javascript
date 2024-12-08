@@ -10,7 +10,7 @@ const ask = (hp, prompt) => {
 }
 
 const rope = (hp) => {
-    
+    console.log("what next?");
 }
 
 const well = (hp) => {
@@ -18,17 +18,10 @@ const well = (hp) => {
     say("Walking up to it ans looking down");
     say("You see a shiny thing at the bottom");
     let next = ask(hp, "What do you do?");
-    if ( next === "climb") {
-        say("You climb down the rope.");
-        rope (hp);
-    }else if (next === "jump") {
-        say("Yikes! Let's see if you survive!");
-        hp = Math.floor(hp / 2);
-        rope(hp);
-    }
+    
     
 }
 
-let hp = Math.floor(Math.random() * 10) + 1;
+//let hp = Math.floor(Math.random() * 10) + 1;
 
 well(10);
