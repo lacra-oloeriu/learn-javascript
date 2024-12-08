@@ -6,19 +6,11 @@ const say = (prompt) => {
 const ask = (hp, prompt) => {
     console.log(`[[You have ${hp} hit points.]]`);
     //let's put some logic in here 
-    if(hp <= 0) {
-        die("you died!");
-    } else {
-        return (prompt)
-    }
+    
 }
 
 const rope = (hp) => {
-    if (hp < 0) {
-        die("You didn't make it.");
-    }else {
-        say("You made it");
-    }
+    
 }
 
 const well = (hp) => {
