@@ -18,13 +18,23 @@ const ask = (hp, prompt) => {
     }
    
     }
-    //let's put some logic in here 
+
+    const door = (hp) => {
+        if (hp < 0 ) {
+            die("You didn't make it!");
+        } else {
+            say("You open the door and get the gold.");
+        }
+        ask(hp, "")
+    }
+
 const rope = (hp) => {
     if (hp < 0 ) {
         die("You didn't make it.");
     }else {
         say("You made it!");
     }
+    ask( hp, "What's next?");
 }
 
 
