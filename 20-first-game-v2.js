@@ -21,9 +21,9 @@ const ask = (hp, prompt) => {
 
     const door = (hp) => {
         if (hp < 0 ) {
-            die("You didn't make it!");
+            say("You didn't make it!");
         } else {
-            say("You open the door and get the gold.");
+            door("You open the door and get the gold.");
         }
         ask(hp, "")
     }
