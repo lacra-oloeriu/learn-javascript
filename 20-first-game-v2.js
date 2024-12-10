@@ -20,12 +20,12 @@ const ask = (hp, prompt) => {
     }
 
     const door = (hp) => {
-        if (hp < 0 ) {
+        if (hp > 0 ) {
             say("You didn't make it!");
         } else {
             door("You open the door and get the gold.");
         }
-        ask(hp, "")
+        ask(hp, "What do you do now?")
     }
 
 const rope = (hp) => {
@@ -50,7 +50,10 @@ const well = (hp) => {
         say("Yikes! Let's see if you survive!");
         hp = Math.floor(hp / 2);
         rope(hp);
-    } else {
+    } else if (next ==="door") {
+        say("open the door and find the gold.");
+        door(hp);
+    }else {
         say("You can't do that here.");
         well(hp);
     }
