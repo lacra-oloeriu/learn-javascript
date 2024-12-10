@@ -22,7 +22,7 @@ const ask = (hp, prompt) => {
 const door = (hp) => {
      // they have to open the door to get the gold
     // what kind of puzzle will they solve?  
-        ask(hp, "What do you do now?")
+    say("You open the door and get the gold")
 };
 
 const spider = (hp) => {
@@ -58,6 +58,7 @@ const well = (hp) => {
     } else if (next ==="door") {
         say("open the door and find the gold.");
         door(hp);
+  
     }else {
         say("You can't do that here.");
         well(hp);
@@ -67,6 +68,6 @@ const well = (hp) => {
     
 }
 
-//let hp = Math.floor(Math.random() * 10) + 1;
+let hp = Math.floor(Math.random() * 10) + 1;
 
 well(10);
