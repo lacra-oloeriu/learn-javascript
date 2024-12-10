@@ -20,11 +20,7 @@ const ask = (hp, prompt) => {
     }
 
     const door = (hp) => {
-        if (hp > 0 ) {
-            say("You didn't make it!");
-        } else {
-            door("You open the door and get the gold.");
-        }
+       
         ask(hp, "What do you do now?")
     }
 
