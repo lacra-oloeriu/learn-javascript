@@ -19,10 +19,19 @@ const ask = (hp, prompt) => {
    
     }
 
-    const door = (hp) => {
-       
+const door = (hp) => {
+     // they have to open the door to get the gold
+    // what kind of puzzle will they solve?  
         ask(hp, "What do you do now?")
-    }
+};
+
+const spider = (hp) => {
+        // they enter here, and the spider takes 10 hit points
+        // if they live then they can run away
+};
+
+
+
 
 const rope = (hp) => {
     if (hp < 0 ) {
