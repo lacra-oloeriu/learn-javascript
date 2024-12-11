@@ -23,6 +23,7 @@ const door = (hp) => {
      // they have to open the door to get the gold
     // what kind of puzzle will they solve?  
     say("You open the door and get the gold")
+    ask(hp, "What now?")
 };
 
 const spider = (hp) => {
@@ -78,4 +79,4 @@ const well = (hp) => {
 
 let hp = Math.floor(Math.random() * 10) + 1;
 
-well(10);
+well(25);
