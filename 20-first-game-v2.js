@@ -23,7 +23,7 @@ const door = (hp) => {
      // they have to open the door to get the gold
     // what kind of puzzle will they solve?  
     say("You open the door and get the gold")
-    ask(hp, "What now?")
+    ask(hp, "What now?: ")
 };
 
 const spider = (hp) => {
@@ -46,6 +46,7 @@ const rope = (hp) => {
     // they are at the bottom of the well
     // they can go through the door to the gold
     // or go take a wrong turn to the spider
+    say("");
     say ("You are at the botton of the well.");
     say ("Go to the rihgt and find a door.")
     say (" Go left and see what is there ( maybe a spider).")
@@ -54,15 +55,16 @@ const rope = (hp) => {
     }else {
         door("You open the door and find the gold!!");
     }
-    ask( hp, "What's next?");
+    ask( hp, "What's next?:  ");
 }
 
 
 const well = (hp) => {
+    say("");
     say("You are walking through the woods and see a well.");
     say("Walking up to it ans looking down");
     say("You see a shiny thing at the bottom");
-    let next = ask(hp, "What do you do?");
+    let next = ask(hp, "What do you do?: ");
     if(next === "climb") {
         say("You climb down the rope.");
         rope(hp);
