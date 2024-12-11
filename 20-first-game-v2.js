@@ -70,11 +70,13 @@ const well = (hp) => {
         say("Yikes! Let's see if you survive!");
         hp = Math.floor(hp / 2);
         rope(hp);
-    } else if (next ==="door") {
-        say("open the door and find the gold.");
-        door(hp);
+    } 
+    else if (next ==="door") {
+    say("open the door and find the gold.");
+        //door(hp);
   
-    }else {
+    }
+    else {
         say("You can't do that here.");
         well(hp);
     }
