@@ -43,10 +43,16 @@ const spider = (hp) => {
 
 
 const rope = (hp) => {
+    // they are at the bottom of the well
+    // they can go through the door to the gold
+    // or go take a wrong turn to the spider
+    say ("You are at the botton of the well.");
+    say ("Go to the rihgt and find a door.")
+    say (" Go left and see what is there ( maybe a spider).")
     if (hp < 0 ) {
-        die("You didn't make it.");
+        spider("You go left and find a spider.");
     }else {
-        say("You made it!");
+        door("You open the door and find the gold!!");
     }
     ask( hp, "What's next?");
 }
