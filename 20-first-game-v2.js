@@ -26,6 +26,14 @@ const door = (hp) => {
 };
 
 const spider = (hp) => {
+    say ("You enter and you find a spider");
+    say ("The spider takes you 10 hit points");
+    if(hp = 0) {
+        die("The spider kiled you.")
+    } else {
+        spider("You manage to run away this time!!")
+    }
+
         // they enter here, and the spider takes 10 hit points
         // if they live then they can run away
 };
