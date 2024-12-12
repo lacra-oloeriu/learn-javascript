@@ -22,8 +22,16 @@ const ask = (hp, prompt) => {
 const door = (hp) => {
      // they have to open the door to get the gold
     // what kind of puzzle will they solve?  
+    say("")
     say("You open the door and get the gold")
-    ask(hp, "What now?: ")
+    let next = ask(hp, "What now? ") 
+        if (next = " finish") {
+            say(" Congratulation , you have find the goold!")
+        } else {
+            well(hp);
+        }
+        
+    
 };
 
 const spider = (hp) => {
