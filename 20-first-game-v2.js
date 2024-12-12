@@ -49,11 +49,12 @@ const rope = (hp) => {
     say("");
     say ("You are at the botton of the well.");
     say ("Go to the rihgt and find a door.")
-    say (" Go left and see what is there ( maybe a spider).")
-    if (hp < 0 ) {
-        spider("You go left and find a spider.");
-    }else {
-        door("You open the door and find the gold!!");
+    say (" Go left and find a spider.")
+    let next = ask ( hp, "What's next?:  ");
+    if (next ==="spider" ) {
+        say("You go left and find a spider.");
+    }else if (next === "door") {
+        say("Go to the right and find a door.");
     }
     ask( hp, "What's next?:  ");
 }
@@ -75,7 +76,7 @@ const well = (hp) => {
     } 
     else if (next ==="door") {
     say("open the door and find the gold.");
-        //door(hp);
+        door(hp);
   
     }
     else {
