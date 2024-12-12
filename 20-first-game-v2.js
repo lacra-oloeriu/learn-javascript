@@ -27,13 +27,18 @@ const door = (hp) => {
 };
 
 const spider = (hp) => {
+    say("")
     say ("You enter and you find a spider");
     say ("The spider takes you 10 hit points");
-    if(hp = 0) {
-        die("The spider kiled you.")
-    } else {
-        spider("You manage to run away this time!!")
+    let next = ask(hp, "What you can do now??")
+    if(next  = "left") {
+        say("The spider took you 10 hp and  kiled you.")
+    } else if (next = "right") {
+        say("You manage to run away this time, go right and find a door to the gold!!")
+    }else {
+        ask( hp, "Did you find the door?  ")
     }
+
 
         // they enter here, and the spider takes 10 hit points
         // if they live then they can run away
@@ -74,9 +79,9 @@ const well = (hp) => {
         hp = Math.floor(hp / 2);
         rope(hp);
     } 
-    else if (next ==="door") {
-    say("open the door and find the gold.");
-        door(hp);
+    else if (next ==="spider") {
+    say("The spider took you 10 hp.Run to save you life !");
+        spider(hp);
   
     }
     else {
