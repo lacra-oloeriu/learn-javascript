@@ -22,15 +22,27 @@ const ask = (hp, prompt) => {
 const gold = (hp) => {
      // they have to open the door to get the gold
     // what kind of puzzle will they solve?  
-    say("You fimd the gold but you need to solve a puzzel!")
-        
+    say("");
+    say("You fimd the gold  protedted by a spirit");
+    say("The spirit asks you: ");
+    say("   Buzzing around, I make sweet gold,");
+    say("   In a hive, my work unfolds.");
+    
+    
+    let answer = ask(hp, "   What am I? ");
+    say("");
+    if (answer === "a bee"){
+        say("You are wrich. You won the game. YES !!!!!!. CONCGRATS");
+    } else{
+        say ("No gold for you. But atleast you did not died. Game over");
+    }
     
 };
 
 const spider = (hp) => {
     say("")
     say ("You enter and you find a spider");
-    say ("The spider takes you 10 hit points");
+    say ("The spider takes you 10 hit points"); 
     hp = hp -10;
     if (hp > 10) {
         say("You suvive and run back.")
@@ -79,17 +91,10 @@ const well = (hp) => {
         hp = Math.floor(hp / 2);
         rope(hp);
     } 
-    else if (next ==="spider") {
-    say("The spider took you 10 hp.Run to save you life !");
-        spider(hp);
-  
-    }
     else {
         say("You can't do that here.");
         well(hp);
     }
-
-    
     
 }
 
