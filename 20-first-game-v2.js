@@ -32,7 +32,7 @@ const gold = (hp) => {
     let answer = ask(hp, "   What am I? ");
     say("");
     if (answer === "a bee"){
-        say("You are wrich. You won the game. YES !!!!!!. CONCGRATS");
+        say("You are rich. You won the game. YES !!!!!!. CONCGRATS");
     } else{
         say ("No gold for you. But atleast you did not died. Game over");
     }
