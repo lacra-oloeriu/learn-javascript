@@ -19,17 +19,10 @@ const ask = (hp, prompt) => {
    
     }
 
-const door = (hp) => {
+const gold = (hp) => {
      // they have to open the door to get the gold
     // what kind of puzzle will they solve?  
-    say("")
-    say("You open the door and get the gold")
-    let next = ask(hp, "What now? ") 
-        if (next = " finish") {
-            say(" Congratulation , you have find the goold!")
-        } else {
-            door(hp);
-        }
+    say("You fimd the gold but you need to solve a puzzel!")
         
     
 };
@@ -38,15 +31,13 @@ const spider = (hp) => {
     say("")
     say ("You enter and you find a spider");
     say ("The spider takes you 10 hit points");
-    let next = ask(hp, "What you can do now??")
-    if(next  = "left") {
-        say("The spider took you 10 hp and  kiled you.")
-    } else if (next = "right") {
-        say("You manage to run away this time, go right and find a door to the gold!!")
-    }else {
-        ask( hp, "Did you find the door?  ")
+    hp = hp -10;
+    if (hp > 10) {
+        say("You suvive and run back.")
+        rope(hp);
+    } else {
+        say("you died!")
     }
-
 
         // they enter here, and the spider takes 10 hit points
         // if they live then they can run away
@@ -64,11 +55,13 @@ const rope = (hp) => {
     say ("You see two doors.")
     let next = ask ( hp, "Wich one you chose? The left or right one? ");
     if (next ==="left" ) {
-        say("To be implemented. I need to go to the sider");
+       // say("To be implemented. I need to go to the sider");
+        spider(hp);
     }else if (next === "right") {
-        say("To be implemented. I need to go to find the gold");
+        //say("To be implemented. I need to go to find the gold");
+        gold(hp);
     }
-    
+
 }
 
 
