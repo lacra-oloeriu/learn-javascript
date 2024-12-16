@@ -40,8 +40,14 @@ const Person = (name, age, eyes) => {
     // then attach our function to it
     obj.talk = (words) => {
         //obj here will keep a reference 
-        console.log(`I am ${obj.name} and${words}`);
+        console.log(`I am ${obj.name}, I am ${obj.age}, I have green eyes ,  ${words}`);
     }
     //and return our new person
     return obj
 }
+
+// let's use that to make someone named alex
+let alex = Person("Alex", 16, "green");
+// and see how they can talk without repetition?
+alex.talk ("Hi there!");
+
