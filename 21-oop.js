@@ -42,6 +42,10 @@ const Person = (name, age, eyes) => {
         //obj here will keep a reference 
         console.log(`I am ${obj.name}, I am ${obj.age}, I have green eyes ,  ${words}`);
     }
+
+    obj.walk = (distance, direction) => {
+        console.log(`${obj.name} walked`, distance, "in the direction of", direction)
+    }
     //and return our new person
     return obj
 }
@@ -51,3 +55,4 @@ let alex = Person("Alex", 16, "green");
 // and see how they can talk without repetition?
 alex.talk ("Hi there!");
 
+alex.walk("200m", "north");
