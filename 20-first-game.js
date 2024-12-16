@@ -42,6 +42,18 @@ const spider = (hp) => {
 }
 
 const gold = (hp) => { 
+    say("");
+    say("You find the gold protected by a spirit");
+    say("The spirit askd you:");
+    say("Buzzing around, I make sweet gold,");
+    say("In a hive, my work unfolds.");
+    let answer = ask(hp, "What I am???");
+    if (answer === "a bee") {
+        say("You are rich you woon the game ! Yessss! Congrats!!")
+    } else {
+        say("No gold for you ! At leest you didm't died! Game over!!")
+    }
+
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?'
     //end of the game they win if they get the gold
