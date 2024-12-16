@@ -20,9 +20,6 @@ const ask = (hp, prompt) => {
 }
 
 //const door = (hp) => {
-   // say("You open the door and get the gold");
-    //say("A monster is guarding the goold"); the monster");
-    
    // }
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?'
@@ -44,7 +41,9 @@ const spider = (hp) => {
     //if they live then theey can run away
 }
 
-const gold = (hp) => {
+const gold = (hp) => { 
+    //they have to open the door to get the gold
+    //what kind of puzzel will thwy solve?'
     //end of the game they win if they get the gold
 }
 
