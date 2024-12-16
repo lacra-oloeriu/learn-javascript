@@ -19,27 +19,19 @@ const ask = (hp, prompt) => {
     }
 }
 
-const door = (hp) => {
-    say("You open the door and get the gold");
-    say("A monster is guarding the goold");
-    say("Use a shiny thing to bit the monster");
-    //let after = ask(hp, "What do you do?");
-    if ( next ==="spider") {
-        say("you open the door.");
-        (hp);
-    }else if (next ==="bit the monster") {
-        say("You bit the monster");
-        hp= Math.floor(hp/2);
-        (hp)
-    }else {
-        say("you can't do that here")
-        (hp)
-    }
+//const door = (hp) => {
+   // say("You open the door and get the gold");
+    //say("A monster is guarding the goold");
+    //say("Use a shiny thing to bit the monster");
+    
+   // }
     //they have to open the door to get the gold
     //what kind of puzzel will thwy solve?
-}
+
 
 const spider = (hp) => {
+    say("")
+    
     //They enter here, annd the spider takes 10 hits points.
     //if they live then theey can run away
 }
@@ -49,18 +41,23 @@ const gold = (hp) => {
 }
 
 const rope = (hp) => {
-    if (hp < 0) {
-        die("You didn't make it");
-    } else {
-        say("You made it!");
+    say("")
+    say("You are at the botton pg the well.");
+    say("You see two doors");
+    let next = ask(hp, "Wich one do you chose? The left or the right?")
+    if (next === "left") {
+        spider(hp);
+    } else  if (next ==="right") {
+        gold(hp);
     }
-    ask( hp, "What's next?");
+    
     //they are at the bottom of the well
     //they can go through the door to the gold
     //or go take a wrong turn to the spider
 }
 
 const well = (hp) => {
+    say("")
     say("You are walking through the woods and see a well.");
     say("Walking up to it and looking down");
     say("you see a shiny thing at the bottom.");
@@ -83,4 +80,4 @@ const well = (hp) => {
 let hp = Math.floor(Math.random() * 10) + 1;
 
 // this starts the game
-well(hp)
+well(10)
