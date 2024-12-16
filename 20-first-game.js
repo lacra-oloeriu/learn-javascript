@@ -21,17 +21,25 @@ const ask = (hp, prompt) => {
 
 //const door = (hp) => {
    // say("You open the door and get the gold");
-    //say("A monster is guarding the goold");
-    //say("Use a shiny thing to bit the monster");
+    //say("A monster is guarding the goold"); the monster");
     
    // }
     //they have to open the door to get the gold
-    //what kind of puzzel will thwy solve?
-
+    //what kind of puzzel will thwy solve?'
 
 const spider = (hp) => {
     say("")
-    
+    say("You enter here and you find a spider.");
+    say("The spider take you 10 hp.");
+    hp = hp - 10;
+    if ( hp >= 0) {
+        say("you manage to escape");
+        rope(hp);
+    } else {
+        say("You died")
+
+    }
+
     //They enter here, annd the spider takes 10 hits points.
     //if they live then theey can run away
 }
@@ -80,4 +88,4 @@ const well = (hp) => {
 let hp = Math.floor(Math.random() * 10) + 1;
 
 // this starts the game
-well(10)
+well(20)
