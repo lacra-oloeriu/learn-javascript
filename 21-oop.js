@@ -37,3 +37,7 @@ jon.talk("I am new!");
 jon.walk("450m", "Vest");
 joseph.talk("I am from Gent!");
 joseph.walk("700m", "Vest");
+anne.talk("I am from Drongen!");
+anne.walk("700m", "Est");
+zed.talk("I am from Gent!");
+zed.walk("700m", "Vest");
