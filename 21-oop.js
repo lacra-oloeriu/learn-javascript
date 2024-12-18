@@ -32,7 +32,8 @@ Person("Alex", 16, "green"),
 // constructing a for loop  using people
 
 for ( let human  of people) {
-    human.talk("I am human!");
+    human.talk(`I am ${human.name}`);
     human.walk("400m", "sud");
+
 }
 
