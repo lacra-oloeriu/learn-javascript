@@ -9,7 +9,7 @@ const Person = (name, age, eyes) => {
     // then attach our function to it
     obj.talk = (words) => {
         //obj here will keep a reference 
-        console.log(`I am ${obj.name}, I am ${obj.age}, and  ${words}.`);
+        console.log(`I am ${obj.name}, I am ${obj.age}, and  I have ${obj.eyes} eyes.`);
     }
 
     obj.walk = (distance, direction) => {
@@ -32,7 +32,7 @@ Person("Alex", 16, "green"),
 // constructing a for loop  using people
 
 for ( let human  of people) {
-    human.talk(`I am ${human.name}`);
+    human.talk("I am human");
     human.walk("400m", "sud");
 
 }
