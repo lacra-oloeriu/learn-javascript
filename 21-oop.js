@@ -20,24 +20,19 @@ const Person = (name, age, eyes) => {
 }
 
 // let's use that to make someone named alex
-let alex = Person("Alex", 16, "green");
-let mary = Person("Mary", 90, "blue");
-let jon = Person("Jon",35, "brown");
-let joseph = Person("Joseph", 19, "green");
-let anne = Person("Anne", 16,"blue");
-let zed = Person("Zed", 45, "green");
-// and see how they can talk without repetition?
+let people  =[ 
+Person("Alex", 16, "green"),
+ Person("Mary", 90, "blue"),
+ Person("Jon",35, "brown"),
+ Person("Joseph", 19, "green"),
+ Person("Anne", 16,"blue"),
+ Person("Zed", 45, "green"),
+];
 
+// constructing a for loop  using people
 
-alex.talk ("Hi there!");
-alex.walk("200m", "north.");
-mary.talk("Hello");
-mary.walk("150m", "sud.");
-jon.talk("I am new!");
-jon.walk("450m", "Vest.");
-joseph.talk("I am from Gent!");
-joseph.walk("700m", "Vest.");
-anne.talk("I am from Drongen!");
-anne.walk("700m", "Est.");
-zed.talk("I am from Gent!");
-zed.walk("700m", "Vest.");
+for ( let human  of people) {
+    human.talk("I am human!");
+    human.walk("400m", "sud");
+}
+
