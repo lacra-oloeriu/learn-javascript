@@ -30,14 +30,14 @@ let zed = Person("Zed", 45, "green");
 
 
 alex.talk ("Hi there!");
-alex.walk("200m", "north");
+alex.walk("200m", "north.");
 mary.talk("Hello");
-mary.walk("150m", "sud");
+mary.walk("150m", "sud.");
 jon.talk("I am new!");
-jon.walk("450m", "Vest");
+jon.walk("450m", "Vest.");
 joseph.talk("I am from Gent!");
-joseph.walk("700m", "Vest");
+joseph.walk("700m", "Vest.");
 anne.talk("I am from Drongen!");
-anne.walk("700m", "Est");
+anne.walk("700m", "Est.");
 zed.talk("I am from Gent!");
-zed.walk("700m", "Vest");
+zed.walk("700m", "Vest.");
