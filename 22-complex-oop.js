@@ -1,17 +1,18 @@
 const Person = (name, age, eyes) => {
-    let obj = {
-        name: name,
-        age: age,
-        eyes: eyes
+    let ths = {}
+        ths.name = name;
+        ths.age  = age;
+        ths.eyes = eyes
+    
+
+    ths.talk = (words) => {
+        console.log(`I am ${ths.name} and ${words}`)
     }
 
-    obj.talk = (words) => {
-        console.log(`I am ${obj.name} and ${words}`)
-    }
-
-    return obj;
+    return ths;
 }
 
 let alex = Person("Alex", 18, "green");
-
-alex.talk("I am human");
+ alex.talk("I am a student");
+ let mary = Person("Mary", 54, "blue");
+ mary.talk("I am human!!")
