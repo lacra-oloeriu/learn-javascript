@@ -9,7 +9,7 @@ const Person = (name, age, eyes) => {
     // then attach our function to it
     obj.talk = (words) => {
         //obj here will keep a reference 
-        console.log(`I am ${obj.name}, I am ${obj.age}, and  I have ${obj.eyes} eyes.`);
+        console.log(`I am ${obj.name}, and ${words} `);
     }
 
     obj.walk = (distance, direction) => {
