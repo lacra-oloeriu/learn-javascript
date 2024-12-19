@@ -17,4 +17,6 @@ let alex = Person("Alex", 18, "green");
  let mary = Person("Mary", 54, "blue");
  mary.talk("I am human!!");
 
- console.log (`Alex is ${alex.age}, Mary's ${mary.age}`)
+ console.log (`Alex is ${alex.age}, Mary's ${mary.age}`);
+
+ // the same code but using class constructor
