@@ -7,8 +7,8 @@ class Guitar {
 
     play(note) {
 
-        //console.log("Playing", note)
-        console.log(`${this.name}: ${this.color}: ${this.wood}: plays ${note}`)
+        console.log("Playing", note)
+        //console.log(`${this.name}: ${this.color}: ${this.wood}: plays ${note}`)
     }
 }
 
@@ -53,4 +53,6 @@ class Musician extends Person {
 
 let alex = new Musician("Alex" , 16 , "green" )
 alex.talk("I am playing some tones")
+
+alex.play(t1, ["A", "B", "C", "D"])
 
