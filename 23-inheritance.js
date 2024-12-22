@@ -15,8 +15,16 @@ class Guitar {
 
 }
 
+class Telecaster extends Guitar {
+    volum(level) {
+        console.log("Volume", level)
+    }
+
+}
+
 
 let g1 = new Guitar();
-g1.play("A")
+g1.play("A");
 
-//console.log("Playing", note)
+let t1 = new Telecaster
+t1.volum ("L")
