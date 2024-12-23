@@ -37,27 +37,27 @@ class BassVI extends Jazzmaster {
 
 
 
-class Telecaster extends Guitar {
-    volum(level) {
-        console.log("Volume", level)
-    }
-    tone(level) {
-        console.log("Tone", level)
-    }
-}
+//class Telecaster extends Guitar {
+//    volum(level) {
+  //      console.log("Volume", level)
+  //  }
+    //tone(level) {
+    //    console.log("Tone", level)
+   // }
+//}
 
 
-let g1 = new Guitar();
-g1.play("A");
-let t1 = new Telecaster
-t1.volum ("L")
-t1.tone("L1")
+//let g1 = new Guitar();
+//////g1.play("A");
+//let t1 = new Telecaster
+//t1.volum ("L")
+//t1.tone("L1")
 
 class Person {
     constructor(name, age, eyes) {
         this.name = name;
         this.age = age;
-        this.eyes = eyes;
+        //this.eyes = eyes;
     }
 
     talk(words) {
@@ -74,8 +74,16 @@ class Musician extends Person {
     }
 }
 
-let alex = new Musician("Alex" , 16 , "green" )
-alex.talk("I am playing some tones")
+let babbington = new Musician("Roy Babbington", 78);
+let harris = new Musician("Jet Harris", 71);
+let taliesin = new BassVI("red", "Taliesin");
+let golden = new BassVI("gold", "Golden Arm");
 
-alex.play(t1, ["A", "B", "C", "D"])
+babbington.play(taliesin, ['a','b','c','d']);
+harris.play(golden, ['a','b','c','d']);
+
+//let alex = new Musician("Alex" , 16 , "green" )
+//alex.talk("I am playing some tones")
+
+//alex.play(t1, ["A", "B", "C", "D"])
 
