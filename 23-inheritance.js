@@ -29,7 +29,11 @@ class Jazzmaster extends Guitar {
     }
 }
 
-
+class BassVI extends Jazzmaster {
+    play(note) {
+        console.log(`${note}`);
+    }
+}
 
 
 
