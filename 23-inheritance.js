@@ -8,9 +8,28 @@ class Guitar {
     play(note) {
 
         console.log("Playing", note)
-        //console.log(`${this.name}: ${this.color}: ${this.wood}: plays ${note}`)
+        console.log(`${this.name}: ${this.color}: ${this.wood}: plays ${note}`)
+    }
+
+}
+
+class Jazzmaster extends Guitar {
+    constructor (color, name, wood) {
+        super(color, name, wood);
+        this.volume = 0;
+        this.tone = 0;
+    }
+
+    volume(level) {
+        this.volume = level;
+    }
+
+    tone(level) {
+        this.tone = level;
     }
 }
+
+
 
 
 
