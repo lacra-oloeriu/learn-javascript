@@ -44,6 +44,20 @@ hit(amount) {
 
 }
 
+class Room {
+    constructor (name) {
+        this.name = name;
+    }
+
+    enter () {
+        console.log("Implement me!");
+    }
+}
+
+
+
+
+
 
 
 
