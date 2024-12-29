@@ -61,6 +61,21 @@ class Door extends Room {
     }
 }
 
+class Spider extends Room {
+    enter () {
+        // they ebter here , and the spider takes 10 hit points
+        // if they live then they can run away
+    }
+}
+
+class Gold extends Room {
+    enter() {
+        // end the game , they win  if they get the gold
+    }
+}
+
+
+
 
 
 
