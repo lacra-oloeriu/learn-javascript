@@ -54,6 +54,15 @@ class Room {
     }
 }
 
+class Door extends Room {
+    enter() {
+        //they have to  open the door to get goold
+        // what puzle will they solve?
+    }
+}
+
+
+
 
 
 
