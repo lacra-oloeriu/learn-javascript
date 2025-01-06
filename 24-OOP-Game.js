@@ -83,7 +83,26 @@ class Rope extends Room {
     }
 }
 
+class Well extends Room {
 
+    enter() {
+      this.game.say("You are walking through the woods and see a well.");
+      this.game.say("Walking up to it and looking down you see a shiny thing at the bottom.");
+      let next = this.game.ask("What do you do?");
+  
+      if(next === "climb") {
+          this.game.say("You climb down the rope.");
+          this.game.rope.enter();
+      } else if(next === "jump") {
+          this.game.say("Yikes! Let's see if you survive!");
+          this.game.hit(5);
+          this.game.rope.enter();
+      } else {
+          this.game.say("You can't do that here.");
+          this.game.well.enter();
+      }
+    }
+  }
 
 
 
