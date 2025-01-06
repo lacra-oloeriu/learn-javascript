@@ -75,6 +75,14 @@ class Gold extends Room {
 }
 
 
+class Rope extends Room {
+    enter () {
+        // They are at the bottom of the well
+        //They can  go through the door to the gold
+        // or go take a wrong turn to the spider
+    }
+}
+
 
 
 
