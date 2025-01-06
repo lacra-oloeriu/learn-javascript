@@ -104,6 +104,15 @@ class Well extends Room {
     }
   }
 
+let game = new Game();
+game.addRoom(new Well("well"));
+game.addRoom(new Rope("rope"));
+game.addRoom(new Gold("gold"));
+game.addRoom(new Spider("spider"));
+game.addRoom(new Door("door"));
+console.log(Object.entries(game));
+game.play("well");
+
 
 
 
