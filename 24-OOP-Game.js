@@ -6,17 +6,13 @@ class Game {
         //this.addRooms(rooms)
     }
 
-
-
  say (prompt) {
     console.log(prompt)
 }
-
-
 //say("I started the game")
 
  die (message)  {
-    say(message);
+    this.say(message);
     process.exit(1);
 }
 
