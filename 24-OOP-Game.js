@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
 
 class Game {
-    constroctor() {
+    constructor() {
         this.hp = Math.floor(Math.random() * 10) + 1;
         //this.addRooms(rooms)
     }
