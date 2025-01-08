@@ -80,7 +80,12 @@ class Rope extends Room {
             this.game.say("You enter the door and find the gold!!")
             this.game.door.enter()
         } else  if ( next ==="left") {
-            
+            this.game.say("A big spider attac you and takes 4 hp.")
+            this.game.spider.enter()
+
+        } else {
+            this.game.say("You can't do that here.");
+            this.game.well.enter();
         }
 
         // They are at the bottom of the well
@@ -118,16 +123,3 @@ game.addRoom(new Spider("spider"));
 game.addRoom(new Door("door"));
 console.log(Object.entries(game));
 game.play("well");
-
-
-
-
-
-
-
-
-
-
-
-
-
