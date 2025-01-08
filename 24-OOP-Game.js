@@ -73,6 +73,16 @@ class Gold extends Room {
 
 class Rope extends Room {
     enter () {
+        this.game.say("You are at the bottom of the well.");
+        this.game.say("You see two doors.");
+        let next = this.game.ask("What is the lucky door???");
+        if (next === "right") {
+            this.game.say("You enter the door and find the gold!!")
+            this.game.door.enter()
+        } else  if ( next ==="left") {
+            
+        }
+
         // They are at the bottom of the well
         //They can  go through the door to the gold
         // or go take a wrong turn to the spider
