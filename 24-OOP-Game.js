@@ -73,6 +73,7 @@ class Gold extends Room {
 
 class Rope extends Room {
     enter() {
+        this.game.say(" ")
         this.game.say("You are at the bottom of the well.");
         this.game.say("You see two doors.");
         let next = this.game.ask("What is the lucky door???");
