@@ -79,7 +79,8 @@ class Rope extends Room {
         let next = this.game.ask("What is the lucky door???");
         if (next === "right") {
             this.game.say("You enter the door and find the gold!!")
-            this.game.door.enter()
+            //this.game.door.enter()
+            this.hp
         } else if (next === "left") {
             this.game.say("A big spider attac you and takes 4 hp.")
             this.game.spider.enter()
@@ -98,6 +99,7 @@ class Rope extends Room {
 class Well extends Room {
 
     enter() {
+        this.game.say(" ")
         this.game.say("You are walking through the woods and see a well.");
         this.game.say("Walking up to it and looking down you see a shiny thing at the bottom.");
         let next = this.game.ask("What do you do?");
