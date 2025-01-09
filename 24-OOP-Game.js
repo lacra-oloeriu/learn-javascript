@@ -53,9 +53,10 @@ class Room {
 class Door extends Room {
     enter() {
         this.game.say(" ");
-        this,game.say("You enter the door and find the gold")
+        this.game.say("You enter the door and find the gold")
         this.hp
-
+        console.log("Dor hp = ", this.hp);
+        console.log("Game hp = ", this.game.hp);
 
         //they have to  open the door to get goold
         // what puzle will they solve?
@@ -64,6 +65,16 @@ class Door extends Room {
 
 class Spider extends Room {
     enter() {
+        this.game.say(" ");
+        this.game.say(" A big spider atac you and take you 2 point ");
+        this.hp = this.hp -2
+        if(this.hp > 2) {
+            this.game.say("you suvive and run back")
+            this.game.rope.enter()
+        }else {
+            this.game.say("You died!!!")
+        }
+
         // they ebter here , and the spider takes 10 hit points
         // if they live then they can run away
     }
@@ -87,7 +98,7 @@ class Rope extends Room {
             this.game.door.enter()
             //this.hp
         } else if (next === "left") {
-            this.game.say("A big spider attac you and takes 4 hp.")
+            //this.game.say("A big spider attac you and takes 4 hp.")
             this.game.spider.enter()
 
         } else {
