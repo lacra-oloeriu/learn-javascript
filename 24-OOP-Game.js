@@ -55,6 +55,7 @@ class Door extends Room {
         this.game.say(" ");
         this.game.say("You enter the door and find the gold")
         this.game.hp
+        this.game.rope.enter()
         //console.log("Dor hp = ", this.hp);
         //console.log("Game hp = ", this.game.hp);
 
