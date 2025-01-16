@@ -53,9 +53,8 @@ class Room {
 class Door extends Room {
     enter() {
         this.game.say(" ");
-        this.game.say("You enter the door and find the gold")
+        this.game.say("You enter the door and a spirit told you a rider.")
         this.game.hp
-        this.game.rope.enter()
         //console.log("Dor hp = ", this.hp);
         //console.log("Game hp = ", this.game.hp);
 
@@ -65,15 +64,17 @@ class Door extends Room {
 }
 
 class Spider extends Room {
-    enter() {
+    enter( ) {
         this.game.say(" ");
         this.game.say(" A big spider atac you and take you 2 point ");
-        this.game.hp = this.game.hp -2
+        this.game.hp = this.game.hp - 2
         if(this.game.hp > 2) {
             this.game.say("you suvive and run back")
-            this.game.rope.enter()
-        }else {
+            this.game.door.enter()
+        }else  if ( this.game < 2) {
             this.game.say("You died!!!")
+        } else {
+            this.game.rope.enter()
         }
 
         // they ebter here , and the spider takes 10 hit points
