@@ -40,6 +40,12 @@ class Game {
         room.game = this;
     }
 
+    addRooms(rooms) {
+        for(let room of rooms) {
+            this.addRoom(room)
+        }
+    }
+
     play(name) {
         this[name].enter();
     }
@@ -108,8 +114,8 @@ class Rope extends Room {
         say("You see two doors.");
         let next = this.game.ask("What is the lucky door???");
         if (next === "right") {
-            //this.game.say("You enter the door and find the gold!!")
-            this.game.door.enter()
+            say("You enter the door and find the gold!!")
+            //this.game.door.enter()
             //this.hp
         } else if (next === "left") {
             //this.game.say("A big spider attac you and takes 4 hp.")
@@ -149,11 +155,14 @@ class Well extends Room {
 }
 
 let game = new Game();
-game.addRoom(new Well("well"));
-game.addRoom(new Rope("rope"));
-game.addRoom(new Gold("gold"));
-game.addRoom(new Spider("spider"));
-game.addRoom(new Door("door"));
+
+game.addRooms([
+new Well("well"),
+new Rope("rope"),
+new Gold("gold"),
+new Spider("spider"),
+])
+
 console.log(Object.entries(game));
 game.play("well");
 
