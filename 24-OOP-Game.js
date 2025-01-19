@@ -161,6 +161,7 @@ new Well("well"),
 new Rope("rope"),
 new Gold("gold"),
 new Spider("spider"),
+new Door("door"),
 ])
 
 //console.log(Object.entries(game));
