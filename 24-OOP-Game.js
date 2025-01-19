@@ -1,18 +1,22 @@
 const readline = require('readline-sync');
 
+const say = (prompt) => {
+    console.log(prompt);
+}
+
 class Game {
     constructor() {
         this.hp = Math.floor(Math.random() * 10) + 1;
         //this.addRooms(rooms)
     }
 
-    say(prompt) {
-        console.log(prompt)
-    }
+   // say(prompt) {
+      //  console.log(prompt)
+   // }
     //say("I started the game")
 
     die(message) {
-        this.say(message);
+        say(message);
         process.exit(1);
     }
 
@@ -52,8 +56,8 @@ class Room {
 
 class Door extends Room {
     enter() {
-        this.game.say(" ");
-        this.game.say("You enter the door and a spirit told you a rider.")
+        say(" ");
+        say("You enter the door and a spirit told you a rider.")
         this.game.hp 
 
         
@@ -67,14 +71,14 @@ class Door extends Room {
 
 class Spider extends Room {
     enter( ) {
-        this.game.say(" ");
-        this.game.say(" A big spider atac you and take you 2 point ");
+        say(" ");
+        say(" A big spider atac you and take you 2 point ");
         this.game.hp = this.game.hp - 2
         if(this.game.hp > 2) {
-            this.game.say("you suvive and run back")
+            say("you suvive and run back")
             this.game.rope.enter()
         }else  if ( this.game < 2) {
-            this.game.say("You died!!!")
+            say("You died!!!")
         } else {
             this.game.rope.enter()
         }
@@ -93,9 +97,9 @@ class Gold extends Room {
 
 class Rope extends Room {
     enter() {
-        this.game.say(" ")
-        this.game.say("You are at the bottom of the well.");
-        this.game.say("You see two doors.");
+        say(" ")
+        say("You are at the bottom of the well.");
+        say("You see two doors.");
         let next = this.game.ask("What is the lucky door???");
         if (next === "right") {
             //this.game.say("You enter the door and find the gold!!")
@@ -106,7 +110,7 @@ class Rope extends Room {
             this.game.spider.enter()
 
         } else {
-            this.game.say("You can't do that here.");
+            say("You can't do that here.");
             this.game.well.enter();
         }
 
@@ -119,20 +123,20 @@ class Rope extends Room {
 class Well extends Room {
 
     enter() {
-        this.game.say(" ")
-        this.game.say("You are walking through the woods and see a well.");
-        this.game.say("Walking up to it and looking down you see a shiny thing at the bottom.");
+        say(" ")
+        say("You are walking through the woods and see a well.");
+        say("Walking up to it and looking down you see a shiny thing at the bottom.");
         let next = this.game.ask("What do you do?");
 
         if (next === "climb") {
-            this.game.say("You climb down the rope.");
+            say("You climb down the rope.");
             this.game.rope.enter();
         } else if (next === "jump") {
-            this.game.say("Yikes! Let's see if you survive!");
+            say("Yikes! Let's see if you survive!");
             this.game.hit(2);
             this.game.rope.enter();
         } else {
-            this.game.say("You can't do that here.");
+            say("You can't do that here.");
             this.game.well.enter();
         }
     }
