@@ -27,7 +27,7 @@ class Game {
     //}
 
     ask(prompt) {
-        console.log(`[[You have $${this.hp} hit points.]]`);
+        say(`[[You have $${this.hp} hit points.]]`);
         if (this.hp <= 0) {
             die("You died!");
         } else {
@@ -163,7 +163,7 @@ new Gold("gold"),
 new Spider("spider"),
 ])
 
-console.log(Object.entries(game));
+//console.log(Object.entries(game));
 game.play("well");
 
 //game.play(15)
