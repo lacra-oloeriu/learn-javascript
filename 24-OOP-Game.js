@@ -2,7 +2,13 @@ const readline = require('readline-sync');
 
 const say = (prompt) => {
     console.log(prompt);
+} 
+
+const die = (message) => {
+    say(message);
+    process.exit(1);
 }
+
 
 class Game {
     constructor() {
@@ -15,15 +21,15 @@ class Game {
    // }
     //say("I started the game")
 
-    die(message) {
-        say(message);
-        process.exit(1);
-    }
+    //die(message) {
+       // say(message);
+       // process.exit(1);
+    //}
 
     ask(prompt) {
         console.log(`[[You have $${this.hp} hit points.]]`);
         if (this.hp <= 0) {
-            this.die("You died!");
+            die("You died!");
         } else {
             return readline.question(prompt + ' ')
         }
