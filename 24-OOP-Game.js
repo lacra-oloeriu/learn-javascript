@@ -11,7 +11,7 @@ const die = (message) => {
 
 
 class Game {
-    constructor(rooms) {
+    constructor(rooms = []) {
         this.hp = Math.floor(Math.random() * 10) + 1;
         this.addRooms(rooms)
     }
@@ -154,12 +154,23 @@ class Well extends Room {
     }
 }
 
-let game = new Game ([
+/*let game = new Game ([
 new Well("well"),
 new Rope("rope"),
 new Gold("gold"),
 new Spider("spider"),
 new Door("door"),
+])
+*/
+
+let game = new Game();
+
+game.addRooms([
+    new Well("well"),
+    new Rope("rope"),
+    new Gold("gold"),
+    new Spider("spider"),
+    new Door("door"),
 ])
 
 //console.log(Object.entries(game));
