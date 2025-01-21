@@ -6,3 +6,12 @@ const do_it = () => {
 //while(true) {
     console.log("did it");
 //
+
+// simple recursive counting function
+
+const counter = (i, upto) => {
+    if(i < upto) {
+        console.log("counter", i, upto);
+        counter(i + 1, upto)
+    }
+}
