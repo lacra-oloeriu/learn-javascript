@@ -17,4 +17,16 @@ const counter = (i, upto) => {
 }
 
 // use counter to just print out
+counter(1, 5);
+
+// a more complex counter that can call a callback
+
+const cb_counter = (i , upto, cb) => {
+    if (i < upto) {
+        cb(i, upto);
+        cb_counter(i + 1, upto, cb);
+    }
+}
+
 counter(1, 5)
+
