@@ -15,3 +15,6 @@ const counter = (i, upto) => {
         counter(i + 1, upto)
     }
 }
+
+// use counter to just print out
+counter(1, 5)
