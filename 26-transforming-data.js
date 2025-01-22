@@ -14,7 +14,8 @@ let that = new Thing();
 that.doit();
 
 let x = [ 1, 2, 3, 4];
-x.map((i) => i + 10);
+y = x.map((i) => i + 10);
 console.log(x)
+console.log(y)
 
 //adder(x);
