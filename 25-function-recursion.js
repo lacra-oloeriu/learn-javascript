@@ -24,9 +24,13 @@ counter(1, 5);
 const cb_counter = (i , upto, cb) => {
     if (i < upto) {
         cb(i, upto);
-        cb_counter(i + 1, upto, cb);
+        cb_counter(i+1, upto, cb);
     }
 }
 
-counter(1, 5)
+// the same thing but with a callback
+
+cb_counter(1, 6, (i,j) => {
+    console.log(i, j)
+})
 
