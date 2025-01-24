@@ -24,8 +24,10 @@ console.log(y)
  v = x.find((i) => i ==4)
  console.log(v);
 
-  w = x.filter((i) => i % 2 == 1);
+  w = x.filter((i) => i % 2 == 0);
 
   console.log(w);
+
+   x.forEach((i) => console.log("i got" , i ))
 
 //adder(x);
