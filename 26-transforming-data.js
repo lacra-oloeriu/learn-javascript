@@ -18,4 +18,7 @@ y = x.map((i) => i + 10);
 console.log(x)
 console.log(y)
 
+ z = x.reduce ((acc, i) => acc *= i);
+ console.log(z)
+
 //adder(x);
