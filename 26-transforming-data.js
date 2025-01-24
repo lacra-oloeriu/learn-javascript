@@ -21,7 +21,11 @@ console.log(y)
  z = x.reduce ((acc, i) => acc *= i);
  console.log(z)
   
- v = x.find((i) => i ==1)
- console.log(v)
+ v = x.find((i) => i ==4)
+ console.log(v);
+
+  w = x.filter((i) => i == 1);
+  
+  console.log(w);
 
 //adder(x);
