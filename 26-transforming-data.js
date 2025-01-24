@@ -32,14 +32,16 @@ console.log(y)
 
 //Searchimg an array of objects to calculate new things
 
-let pet = [
+let pets = [
     {name: 'Yeller', type: 'Dog', age: 12},
     {name: 'Akumano', type: 'Japese Bobtail catan', age: 2},
     {name: 'Meaw Peesard', type: 'Siamese Cat', age: 100},
     {name: 'James', type: 'Gecko', age: 2},
 
-]
+];
 
+let ages_only = pets.map(pet => pet.age)
+console.log(ages_only);
 
 
 
