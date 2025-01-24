@@ -28,6 +28,20 @@ console.log(y)
 
   console.log(w);
 
-   x.forEach((i) => console.log("i got" , i ))
+   x.forEach((i) => console.log("I got" , i ))
 
-//adder(x);
+//Searchimg an array of objects to calculate new things
+
+let pet = [
+    {name: 'Yeller', type: 'Dog', age: 12},
+    {name: 'Akumano', type: 'Japese Bobtail catan', age: 2},
+    {name: 'Meaw Peesard', type: 'Siamese Cat', age: 100},
+    {name: 'James', type: 'Gecko', age: 2},
+
+]
+
+
+
+
+
+
