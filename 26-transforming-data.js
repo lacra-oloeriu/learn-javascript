@@ -20,5 +20,8 @@ console.log(y)
 
  z = x.reduce ((acc, i) => acc *= i);
  console.log(z)
+  
+ v = x.find((i) => i ==1)
+ console.log(v)
 
 //adder(x);
