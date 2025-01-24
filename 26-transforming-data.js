@@ -46,6 +46,9 @@ console.log(ages_only);
 let total_age = ages_only.reduce((acc, age) => acc += age);
 console.log(total_age);
 
+let meaw = pets.find(pet => pet.name == 'Meaw Peesard');
+console.log(meaw);
+
 
 
 
