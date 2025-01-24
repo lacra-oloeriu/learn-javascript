@@ -43,6 +43,9 @@ let pets = [
 let ages_only = pets.map(pet => pet.age)
 console.log(ages_only);
 
+let total_age = ages_only.reduce((acc, age) => acc += age);
+console.log(total_age);
+
 
 
 
