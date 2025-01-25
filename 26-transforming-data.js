@@ -49,3 +49,8 @@ console.log(total_age);
 let meaw = pets.find(pet => pet.name == 'Meaw Peesard');
 console.log(meaw);
 
+
+let old_animals = pets.filter(pet => pet.age > 10);
+let yoyng_animals = pets.filter( pet => pet.age <= 10);
+
+console.log( " Animal Ages:" , ages_only);
