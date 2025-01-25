@@ -49,7 +49,3 @@ console.log(total_age);
 let meaw = pets.find(pet => pet.name == 'Meaw Peesard');
 console.log(meaw);
 
-
-
-
-
