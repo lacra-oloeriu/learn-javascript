@@ -5,4 +5,9 @@ let pets = [
     {name: 'James', type: 'Gecko', age: 2}
 
 ]
+console.log(pets)
+
+const young_pets = (pet) => {
+    return pet.age <=10;
+}
 
