@@ -18,6 +18,17 @@ const name_age = (pet) => {
     return `${pet[0]} is ${pet[1]}`
 }
 
+const debug = (msg) => {
+    console.log(msg);
+    return msg
+}
+
+let age_young_animals = pets.filter(young_pets)
+.map(age_pets)
+.map(debug)
+.map(name_age)
+.forEach(debug)
+
 
 
 
