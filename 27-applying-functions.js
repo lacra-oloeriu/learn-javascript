@@ -14,6 +14,11 @@ const age_pets = (pet) => {
     return [pet.name, pet.age + 10];
 }
 
+const name_age = (pet) => {
+    return `${pet[0]} is ${pet[1]}`
+}
+
+
 
 
 
