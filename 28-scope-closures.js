@@ -1,6 +1,8 @@
 const var_sucks = () => {
     var var_scope = 10;
     let let_scope = 20;
+    
+console.log(`>>> var_sucks before if: var=${var_scope}, let=${let_scope}`);
 
 
 if(true) {
