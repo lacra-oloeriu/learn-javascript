@@ -15,3 +15,15 @@ if(true) {
 }
 
 var_sucks();
+
+const build_adder = (left) => {
+    // do I  really need this?
+    let left_hand = left;  
+    return (right) => {
+        let result = left_hand + right;
+        return result
+    }
+}
+
+let add10 = build_adder(10);
+let add20 = build_adder(20);
