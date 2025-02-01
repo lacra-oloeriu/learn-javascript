@@ -4,3 +4,11 @@ let pets = [
     {name: 'Meaw Peesard', type: 'Siamese Cat', age: 100},
     {name: 'James', type: 'Gecko', age: 2},
   ]
+
+  const younh_pets = (pet) => {
+    return pet.age <= 10;
+  }
+
+  const age_pets = (pet) => {
+    return [pet.name, pet.age + 10];
+  }
