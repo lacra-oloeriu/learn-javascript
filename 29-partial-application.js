@@ -5,7 +5,7 @@ let pets = [
     {name: 'James', type: 'Gecko', age: 2},
   ]
 
-  const younh_pets = (pet) => {
+  const young_pets = (pet) => {
     return pet.age <= 10;
   }
 
@@ -18,7 +18,15 @@ let pets = [
   }
 
   const debug = (msg) => {
-    console,log(msg);
+    console.log(msg);
     return msg;
   }
+//what si msg???
+let age_young_animals = pets.filter(young_pets)
+.map(age_pets)
+.map(debug)
+.map(name_age)
+.forEach(debug)
+
+
 
