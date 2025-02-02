@@ -28,5 +28,13 @@ let age_young_animals = pets.filter(young_pets)
 .map(name_age)
 .forEach(debug)
 
+// this one is speciale
+const tee = (result, data, cb) => {
+    const side = (input) => {
+        cb(input, result, data);
+    }
+    return side; 
+}
+
 
 
