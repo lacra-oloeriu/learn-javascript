@@ -13,7 +13,7 @@ let pets = [
     return [pet.name, pet.age + 10];
   }
 
-  const name_age =(pet) => {
+  const name_age = (pet) => {
     return `${pet[0]} is ${pet[1]} `;
   }
 
@@ -22,24 +22,37 @@ let pets = [
     return msg;
   }
 //what si msg???
-let age_young_animals = pets.filter(young_pets)
-.map(age_pets)
-.map(debug)
-.map(name_age)
-.forEach(debug)
+//let age_young_animals = pets.filter(young_pets)
+//.map(age_pets)
+//.map(debug)
+//.map(name_age)
+//.forEach(debug)
 
 // this one is speciale
 const tee = (result, data, cb) => {
     const side = (input) => {
         cb(input, result, data);
+        return input;
     }
     return side; 
 }
 
-let owned_pet = [];
-const add_owner_tee = tee(owned_pet, 'Zed', (i,r, d) => {
+let owned_pets = [];
+const add_owner_tee = tee(owned_pets, 'Zed', (i,r, d) => {
     r.push({pet: i, owner: d});
-})
+});
+
+let age_young_animals = pets.filter(young_pets)
+ .map(add_owner_tee)
+ .map(age_pets)
+ .map(name_age);
+
+
+console.log("-- Pets with Owners:");
+owned_pets.forEach(debug);
+
+console.log("-- Young Animals:");
+age_young_animals.forEach(debug);
 
 
 
