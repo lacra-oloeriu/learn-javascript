@@ -36,5 +36,10 @@ const tee = (result, data, cb) => {
     return side; 
 }
 
+let owned_pet = [];
+const add_owner_tee = tee(owned_pet, 'Zed', (i,r, d) => {
+    r.push({pet: i, owner: d});
+})
+
 
 
