@@ -7,3 +7,23 @@
 // In Node. js, we can access these spaces of memory with the built-in Buffer class.
 //  Buffers store a sequence of integers, similar to an array in JavaScript. 
 // Unlike arrays, you cannot change the size of a buffer once it is created.
+
+//callbackstyle
+
+const fs = require('fs') ;
+
+const read_file = (fname, cb) => {
+    fs.stat(fname, (err, stats) => {
+        fs.open(fname, 'r', (err, fd) => {
+            let inbuf = Buffer.alloc(stats.size);
+            fs.read(fd, inbuf, 0, stats.size, null, (err, bytesRead, buffer ) => {
+                cb(buffer);
+            })
+        })
+    })
+}
+
+
+read_file('test.txt', (result) => {
+    console.log(`Result is ${result.toString()}`);
+  });
