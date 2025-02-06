@@ -5,4 +5,8 @@ const read_file = (fname, events) => {
     let onStat = events.onStat || noop;
     let onOpen = events.onOpen|| noop;
     let onRead = events.onRead || noop;
+
+    fs.stat(fname, (err, stats) => {
+        onStat(stats);
+    })
 }
