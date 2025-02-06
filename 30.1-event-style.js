@@ -19,9 +19,21 @@ const read_file = (fname, events) => {
         });
       });
 
-
-
 }
 
+//now we will test if is working
+
+read_file('test.txt', {
+    onRead: (bytesRead, buffer) => {
+      console.log(`Read ${bytesRead} bytes: ${buffer.toString()}`);
+    }, 
+    
+    onStat: (stat) => {
+        console.log(`Got stats, file is ${stat.size} size.`);
+      },
+
+
+
+})
 
    
