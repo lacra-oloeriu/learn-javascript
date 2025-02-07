@@ -32,7 +32,9 @@ read_file('test.txt', {
         console.log(`Got stats, file is ${stat.size} size.`);
       },
 
-
+      onOpen: (fd) => {
+        console.log(`Open worked, fd is ${fd}`)
+      }
 
 })
 
