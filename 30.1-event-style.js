@@ -37,5 +37,3 @@ read_file('test.txt', {
       }
 
 })
-
-   
