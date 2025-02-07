@@ -15,5 +15,14 @@ fs.stat(fname, (err, stats) => {
         onError(err);
     }else {
         onStat(stats);
+
+        fs.open(fname, 'r', (err, fd) => {
+            if(err) {
+                onError(err)
+            } else {
+                onOpen(fd);
+                let inbuf = Buffer.alloc(stats.size);
+            }
+        })
     }
 })
