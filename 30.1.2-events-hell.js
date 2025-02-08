@@ -44,7 +44,13 @@ read_file( 'test.txt' , {
     },
     onStat: (stat) => {
         console.log(`Got stats , file is ${stat.size} size.`)
-    }
+    },
+    onOpen: (fd) => {
+        console.log(`Open worked, fd is ${fd}`);
+      },
+      onError: (err) => {
+        console.error(err);
+      }
 
 })
 
