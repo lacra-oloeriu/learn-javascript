@@ -8,7 +8,7 @@ const read_file = (fname, events) => {
     let onStat = events.onStat || noop;
     let onOpen = events.onOpen || noop;
     let onRead = events.onRead || noop;
-}
+
 
 fs.stat(fname, (err, stats) => {
     if(err) {
@@ -34,3 +34,13 @@ fs.stat(fname, (err, stats) => {
         })
     }
 })
+}
+
+//test if is working
+
+read_file( 'test.txt' , {
+    onRead: (bytesRead, buffer) => {
+        console.log (`Read ${bytesRead} bytes: ${buffer.toString()}`)
+    }
+})
+
