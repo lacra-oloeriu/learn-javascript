@@ -22,6 +22,14 @@ fs.stat(fname, (err, stats) => {
             } else {
                 onOpen(fd);
                 let inbuf = Buffer.alloc(stats.size);
+
+                fs.read(fd, inbuf, 0, stats.size, null,  ( err, bytesRead, buffer ) => {
+                    if(err) {
+                        onError(err);
+                    }else {
+                        onRead(bytesRead, buffer)
+                    }
+                } )
             }
         })
     }
