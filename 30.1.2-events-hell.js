@@ -38,7 +38,7 @@ fs.stat(fname, (err, stats) => {
 
 //test if is working
 
-read_file( 'test.txt' , {
+read_file ( 'test.txt' , {
     onRead: (bytesRead, buffer) => {
         console.log (`Read ${bytesRead} bytes: ${buffer.toString()}`)
     },
@@ -48,7 +48,7 @@ read_file( 'test.txt' , {
     onOpen: (fd) => {
         console.log(`Open worked, fd is ${fd}`);
       },
-      onError: (err) => {
+    onError: (err) => {
         console.error(err);
       }
 
