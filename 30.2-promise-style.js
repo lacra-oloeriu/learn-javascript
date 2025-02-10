@@ -33,3 +33,13 @@ const read_file = (fname) => {
 }
 
 read_file('test.txt');
+
+//let's try a simple metode
+
+const is_promise = new Promise((res, rej) => {
+    res(100);
+})
+
+const prints_number = new Promise((res ,rej) => {
+    res(is_promise)
+}).then(x => console.log(x))
