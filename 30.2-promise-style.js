@@ -13,10 +13,14 @@ wait1.then(x => console.log("Done,", x));
 
 const fs = require('fs').promoses;
 
-// you have to do nested calls any time  you need the .....
+// you have to do nested calls any time  you need the result.....
 
 const read_file = (fname) => {
     fs.open(fname, 'r').then((fh) => {
+        fh.stat().then((stat) => {
+            let buf = Buffer.alloc(stat.size);
+            
+        })
 
     })
 }
