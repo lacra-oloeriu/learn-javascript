@@ -42,4 +42,4 @@ const is_promise = new Promise((res, rej) => {
 
 const prints_number = new Promise((res ,rej) => {
     res(is_promise)
-}).then(x => console.log(x))
+}).then( x => console.log(x))
