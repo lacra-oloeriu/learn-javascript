@@ -1,4 +1,4 @@
-const geometry = require('./13-geometry');
+const geometry = require('./geometry')
 
 let area51 = geometry.area(2.8);
 let cerc2 = geometry.circumference(6);
